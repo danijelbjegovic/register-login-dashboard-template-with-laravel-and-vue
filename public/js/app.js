@@ -70473,7 +70473,7 @@ exports = module.exports = __webpack_require__(12)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -70530,11 +70530,59 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      clipped: false,
+      drawer: true,
+      fixed: false,
+      items: [{
+        icon: 'bubble_chart',
+        title: 'Inspire'
+      }],
+      miniVariant: false,
+      right: true,
+      rightDrawer: false,
+      title: 'Vuetify.js'
+    };
+  },
+
+  name: 'App',
   components: { toolbar: __WEBPACK_IMPORTED_MODULE_0__Toolbar___default.a, AppFooter: __WEBPACK_IMPORTED_MODULE_1__AppFooter___default.a }
 });
 
@@ -70624,7 +70672,7 @@ exports = module.exports = __webpack_require__(12)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -70635,19 +70683,6 @@ exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -70668,31 +70703,18 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "v-toolbar",
+    { attrs: { color: "indigo", dark: "", fixed: "", app: "" } },
     [
-      _c("v-toolbar-title", [_vm._v("App name")]),
+      _c("v-toolbar-side-icon", {
+        on: {
+          click: function($event) {
+            $event.stopPropagation()
+            _vm.drawer = !_vm.drawer
+          }
+        }
+      }),
       _vm._v(" "),
-      _c("v-spacer"),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "hidden-sm-and-down" },
-        [
-          _c(
-            "router-link",
-            { attrs: { to: "/" } },
-            [_c("v-btn", { attrs: { flat: "" } }, [_vm._v("Home")])],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "router-link",
-            { attrs: { to: "/login" } },
-            [_c("v-btn", { attrs: { flat: "" } }, [_vm._v("Login")])],
-            1
-          )
-        ],
-        1
-      )
+      _c("v-toolbar-title", [_vm._v("Application")])
     ],
     1
   )
@@ -70716,8 +70738,82 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "div",
+    "v-app",
+    { attrs: { id: "inspire" } },
     [
+      _c(
+        "v-navigation-drawer",
+        {
+          attrs: { fixed: "", app: "" },
+          model: {
+            value: _vm.drawer,
+            callback: function($$v) {
+              _vm.drawer = $$v
+            },
+            expression: "drawer"
+          }
+        },
+        [
+          _c(
+            "v-list",
+            { attrs: { dense: "" } },
+            [
+              _c(
+                "router-link",
+                { attrs: { to: "/" } },
+                [
+                  _c(
+                    "v-list-tile",
+                    [
+                      _c(
+                        "v-list-tile-action",
+                        [_c("v-icon", [_vm._v("home")])],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-list-tile-content",
+                        [_c("v-list-tile-title", [_vm._v("Home")])],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "router-link",
+                { attrs: { to: "/login" } },
+                [
+                  _c(
+                    "v-list-tile",
+                    [
+                      _c(
+                        "v-list-tile-action",
+                        [_c("v-icon", [_vm._v("contact_mail")])],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-list-tile-content",
+                        [_c("v-list-tile-title", [_vm._v("Login")])],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
       _c("toolbar"),
       _vm._v(" "),
       _c("router-view"),
@@ -73699,7 +73795,7 @@ var render = function() {
     [
       _c(
         "v-container",
-        { attrs: { fluid: "", "mt-3": "" } },
+        { attrs: { fluid: "", "mt-3": "", "fill-height": "" } },
         [
           _c(
             "v-layout",
@@ -73707,7 +73803,7 @@ var render = function() {
             [
               _c(
                 "v-flex",
-                { attrs: { xs12: "", sm8: "", md4: "" } },
+                { attrs: { xs12: "", sm8: "", "fill-height": "" } },
                 [
                   _c(
                     "v-card",

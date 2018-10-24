@@ -1,8 +1,8 @@
 <template>
     <v-content>
-      <v-container fluid mt-3>
+      <v-container fluid mt-3 fill-height>
         <v-layout align-center justify-center>
-          <v-flex xs12 sm8 md4>
+          <v-flex xs12 sm8 fill-height>
             <v-card class="elevation-12">
             <v-form> 
               <v-toolbar>
