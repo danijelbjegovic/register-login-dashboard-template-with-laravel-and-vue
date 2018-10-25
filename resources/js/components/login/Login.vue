@@ -4,7 +4,7 @@
         <v-layout align-center justify-center>
           <v-flex xs12 sm8 fill-height>
             <v-card class="elevation-12">
-            <v-form> 
+            <v-form @submit.prevent="login"> 
               <v-toolbar>
                  
                 <v-toolbar-title>Login form</v-toolbar-title>
@@ -15,7 +15,7 @@
               <v-card-text>
                 
                   <v-text-field prepend-icon="person" v-model="form.email" name="login" required label="E-mail" type="email"></v-text-field>
-                  <v-text-field id="password" prepend-icon="lock" name="password" label="Password" type="password"></v-text-field>
+                  <v-text-field id="password" prepend-icon="lock" v-model="form.password" name="password" label="Password" type="password"></v-text-field>
                 
               </v-card-text>
               <v-card-actions>
@@ -42,6 +42,13 @@
     },
     props: {
       source: String
+    },
+    methods:{
+        login(){
+            axios.post('/api/auth/login', this.form)
+            .then(res => console.log(res.data))
+            .catch(error => console.log(error.response.data))
+        }
     }
   }
 </script>
