@@ -18,6 +18,8 @@
     export default {
         mounted() {
             console.log('Component mounted.')
+            User.doSomething()
+
         }
     }
 </script>
