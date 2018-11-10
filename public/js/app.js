@@ -25297,7 +25297,7 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuet
 
 
 window.User = __WEBPACK_IMPORTED_MODULE_2__helpers_user__["a" /* default */];
-console.log(__WEBPACK_IMPORTED_MODULE_2__helpers_user__["a" /* default */].loggedIn());
+console.log(__WEBPACK_IMPORTED_MODULE_2__helpers_user__["a" /* default */].id());
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -70445,6 +70445,26 @@ var User = function () {
         key: 'loggedIn',
         value: function loggedIn() {
             return this.hasToken();
+        }
+    }, {
+        key: 'logout',
+        value: function logout() {
+            __WEBPACK_IMPORTED_MODULE_1__appStorage__["a" /* default */].clear();
+        }
+    }, {
+        key: 'name',
+        value: function name() {
+            if (this.loggedIn()) {
+                return __WEBPACK_IMPORTED_MODULE_1__appStorage__["a" /* default */].getUser();
+            }
+        }
+    }, {
+        key: 'id',
+        value: function id() {
+            if (this.loggedIn()) {
+                var payload = __WEBPACK_IMPORTED_MODULE_0__token__["a" /* default */].payload(__WEBPACK_IMPORTED_MODULE_1__appStorage__["a" /* default */].getToken());
+                return payload.sub;
+            }
         }
     }]);
 

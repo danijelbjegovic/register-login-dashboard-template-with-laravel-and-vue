@@ -16,7 +16,7 @@ Vue.use(Vuetify)
 
 import User from './helpers/user'
 window.User = User
-console.log(User.loggedIn())
+console.log(User.id())
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
