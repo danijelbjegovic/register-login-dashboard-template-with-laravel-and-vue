@@ -14,6 +14,17 @@ class User {
             AppStorage.store(username,access_token)
         }
     }
+
+    hasToken(){
+        const storedToken = AppStorage.getToken()
+        if(storedToken){
+            return Token.isValid(storedToken) ? true : false
+        }
+        return false
+    }
+    loggedIn(){
+        return this.hasToken()
+    }
 }
 
 export default User = new User()
