@@ -21,6 +21,9 @@
               <v-card-actions>
                 <v-spacer></v-spacer>
                 <v-btn type="submit" color="primary">Login</v-btn>
+                <router-link to="/signup">
+                  <v-btn flat>Sign Up</v-btn>
+                </router-link>
               </v-card-actions>
             </v-form> 
             </v-card>
